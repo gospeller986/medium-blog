@@ -29,10 +29,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
       <div className="flex justify-center  ">
         <div className="px-10" >
           <div className=" text-4xl font-extrabold mt-4">{ type === "signin" ? "Login to your Account" : "Create an Account"}</div>
-          <div className="text-center text-slate-400 ">
-            { type === "signin" ? "Don't have an Account" : "Already have an Acount ?"}
-            <a className=" underline pl-2" href={type === "signin" ? "/signup" :"/signin"}> { type === "signin"  ?  "Sign Up" : "Login"}</a>
-          </div>
+
           <div className="pt-8 gap-4 ">   
         { type === "signup" ? <LabeledInput label="Name" placeholder="Enter your Name" onChange={(e) => {
             setPostInputs({
