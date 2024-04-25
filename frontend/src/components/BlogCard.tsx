@@ -12,7 +12,7 @@ export const BlogCard = ({
   publishedDate,
 }: BlogCardProps) => {
   return (
-    <div className="p-10" >
+    <div className="p-10 cursor-pointer " >
       <div className="flex">
         <div className="flex justify-center flex-col" ><Avatar name= {authorName} /></div>
         <div className=" flex justify-center  items-center" >
