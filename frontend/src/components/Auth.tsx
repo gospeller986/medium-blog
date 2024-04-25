@@ -20,7 +20,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
             navigate("/blogs")
         } catch (error) {
              // alert the user here that the request failed
-             alert("Error while Signing up ")
+             console.log("Error while signing up ")
         }
         
      }
