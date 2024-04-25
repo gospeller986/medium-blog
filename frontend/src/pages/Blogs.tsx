@@ -23,7 +23,7 @@ export const Blogs = () => {
              console.log(blog)
              return  <Link to={`/blog/${blog.id}`} className=" cursor-pointer"  >
              <BlogCard 
-             id = {blog.id}
+             id = {blog.id || "cbb01736-d8ce-4224-89f8-bb1b0e1b5748" }
              authorName={blog.author.name || "Anonymous"}
              title={blog.title}
              content={blog.content}
