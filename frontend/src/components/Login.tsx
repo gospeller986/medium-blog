@@ -2,7 +2,7 @@ import { SigninInput } from "@palsatyajit/medium-common";
 import { useState } from "react";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 export const Login = () => { 
     const navigate = useNavigate()
     const [postInputs, setPostInputs] = useState<SigninInput>({
@@ -32,7 +32,9 @@ export const Login = () => {
     <div className="flex justify-center  ">
       <div className="px-10" >
         <div className=" text-4xl font-extrabold mt-4">Login to your Account</div>
-        
+         <div className="text-center text-slate-400 mt-4" >
+             Dont have an Account ?? <Link to={"/signup"} className="underline" >Sign Up</Link>
+         </div>
         <div className="pt-8 gap-4 ">   
       <LabeledInput label="Email" placeholder="Enter your Email" onChange={(e) => {
           setPostInputs({
