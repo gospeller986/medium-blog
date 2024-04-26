@@ -28,4 +28,6 @@ model Post {
     published Boolean  @default(false)
     author    User     @relation(fields: [authorId] , references: [id])
     authorId  String
+    image_url String   @default("https://miro.medium.com/v2/resize:fit:968/1*F6SrJR7_s95r6oCF3ugMZw.png")
+    likes     Int   @default(0)
 }
